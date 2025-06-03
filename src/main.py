@@ -1,3 +1,5 @@
+import webbrowser
+
 import pyperclip
 
 from src.templating.template_population import get_populated_template
@@ -13,7 +15,8 @@ def main(template_path):
 
     if AUTO_COPY:
         pyperclip.copy(populated_template)
-        print("Populated template copied to clipboard.")
+        print("Populated template copied to clipboard. Opening wordcounter.net ...")
+        webbrowser.open("https://wordcounter.net")
 
     if AUTO_PRINT:
         print("Populated template:")
